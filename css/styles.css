@@ -1,0 +1,180 @@
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* ==============================
+   ENCABEZADO
+   ============================== */
+
+.encabezado {
+    background-color: #078cab;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.encabezado h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    font-size: 16px;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
+
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+.formulario-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+.formulario-card h2 {
+    text-align: center;
+    color: #078cab;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   CAMPOS DEL FORMULARIO
+   ============================== */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 11px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #078cab;
+    box-shadow: 0 0 0 2px rgba(7, 140, 171, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+/* ==============================
+   BOTÓN
+   ============================== */
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #078cab;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #06748e;
+}
+
+/* ==============================
+   MENSAJE DE CONFIRMACIÓN
+   ============================== */
+
+.mensaje {
+    display: none;
+    text-align: center;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #e7f7ec;
+    color: #24713b;
+    font-weight: bold;
+}
+
+.mensaje.mostrar {
+    display: block;
+}
+
+/* ==============================
+   PIE DE PÁGINA
+   ============================== */
+
+footer {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ==============================
+   DISEÑO PARA CELULARES
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    .encabezado p {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        margin-top: 20px;
+        padding: 0 12px;
+    }
+
+    .formulario-card {
+        padding: 22px 18px;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzón CUC Escucha</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Buzón CUC Escucha</h1>
+        <p>Tu voz ayuda a mejorar nuestra Facultad de Ingeniería</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="formulario-card">
+            <h2>Déjanos tu sugerencia</h2>
+            <p class="intro">
+                Comparte tus ideas, opiniones y propuestas para mejorar tu experiencia
+                dentro de la institución.
+            </p>
+
+            <form id="formularioSugerencia">
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej. Laura Gómez"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="programa">Programa académico</label>
+                    <select id="programa" name="programa" required>
+                        <option value="">Seleccione una opción</option>
+                        <option>Ingeniería de Sistemas</option>
+                        <option>Ingeniería Industrial</option>
+                        <option>Ingeniería Civil</option>
+                        <option>Ingeniería Electrónica</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoría de la sugerencia</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccione una opción</option>
+                        <option>Bienestar</option>
+                        <option>Servicios</option>
+                        <option>Clases</option>
+                        <option>Inclusión</option>
+                        <option>Espacios físicos</option>
+                        <option>Procesos académicos</option>
+                        <option>Otros</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="titulo">Título de la sugerencia</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="Ej. Mejorar los espacios de estudio"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="sugerencia">Cuéntanos tu sugerencia</label>
+                    <textarea
+                        id="sugerencia"
+                        name="sugerencia"
+                        rows="6"
+                        placeholder="Escribe aquí tu idea o propuesta..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="contacto">¿Deseas recibir información sobre tu sugerencia?</label>
+                    <select id="contacto" name="contacto">
+                        <option value="no">No</option>
+                        <option value="si">Sí</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar sugerencia</button>
+
+                <p id="mensaje" class="mensaje"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Buzón CUC Escucha | Facultad de Ingeniería</p>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("formularioSugerencia");
+        const mensaje = document.getElementById("mensaje");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            mensaje.textContent = "¡Gracias! Tu sugerencia ha sido registrada correctamente.";
+            mensaje.classList.add("mostrar");
+
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>
